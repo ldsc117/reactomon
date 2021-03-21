@@ -2,13 +2,13 @@ import '../App.css';
 
 function NavBar() {
   return (
-    <div>
+    <nav>
       <h1>Navbar</h1>
-      <ul>
+      <ul className= "Nav-links">
           <li>Pokemons</li>
           <li>Types</li>
       </ul>
-    </div>
+    </nav>
   );
 }
 
