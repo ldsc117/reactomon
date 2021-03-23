@@ -19,6 +19,6 @@ nav{
   list-style: none;
 }
 
-Link {
-  color: white;
+p {
+  background: yellow;
 }

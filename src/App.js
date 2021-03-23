@@ -13,7 +13,8 @@ function App() {
       <NavBar />
       <Switch>
       <Route path="/" exact component={Home}/>
-      <Route path="/pokemons" component={PokemonList}/>
+      <Route path="/pokemons" exact component={PokemonList}/>
+      <Route path="/pokemons/:id" component={ PokemonDetail }/>
       {/* <PokemonDetail /> */}
      
       <Route path="/types" component={TypeList} /> 

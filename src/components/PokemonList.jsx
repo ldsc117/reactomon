@@ -1,5 +1,5 @@
 import React , {useState , useEffect} from 'react';
-
+import {Link} from 'react-router-dom';
 
 function PokemonList() {
 
@@ -17,13 +17,21 @@ function PokemonList() {
         console.log(items.results);
         setItems(items.results);
     } 
+    // const [count ,setCount] = useState(1);
 
 
   return (
     <div>
       <h6>PokemonList</h6>
-      {items.map(item => (
-          <h1>{item.name}</h1>
+      { items.map((pokemon,index) => (
+           
+          <h1 key = {index+1}>
+              
+              <Link to={`/pokemons/${index+1}`}>{pokemon.name}</Link>
+              
+              </h1>
+
+          
       ))}
     </div>
   );
