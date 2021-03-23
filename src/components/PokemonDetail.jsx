@@ -47,7 +47,7 @@ function PokemonDetail({ match }) {
   };
 
   return (
-    <div>
+    <div className="pokemon-details">
       <h1>PokemonDetails</h1>
       <img src= {sprites ? sprites.front_default : null } width="150" height="150"></img>
       <h2>Pokemon Name: {item ? item.name : null}</h2>

@@ -22,3 +22,8 @@ nav{
 p {
   background: yellow;
 }
+.pokemon-details{
+  
+  padding-left: 150px;
+  padding-right: 150px;
+}
