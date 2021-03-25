@@ -5,6 +5,9 @@ import PokemonDetail from './components/PokemonDetail';
 import PokemonList from './components/PokemonList';
 import TypeList from './components/TypeList';
 import { BrowserRouter as Router, Switch , Route } from 'react-router-dom';
+import Card from './components/Card';
+
+
 
 function App() {
   return (
@@ -14,12 +17,20 @@ function App() {
       <Switch>
       <Route path="/" exact component={Home}/>
       <Route path="/pokemons" exact component={PokemonList}/>
-      <Route path="/pokemons/:id" component={ PokemonDetail }/>
-      {/* <PokemonDetail /> */}
-     
+      <Route path="/pokemons/:id" component={ PokemonDetail }/>     
       <Route path="/types" component={TypeList} /> 
       </Switch>
       </Router>
+      <Card 
+      title='Pika'
+      imageUrl="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/20.png"
+      body='Lorem ipsum vrajeala'
+      />
+      <Card 
+      title='Pika'
+      imageUrl="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/20.png"
+      body='Lorem ipsum vrajeala'
+      />
     </div>
   );
 }

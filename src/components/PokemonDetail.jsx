@@ -38,7 +38,6 @@ function PokemonDetail({ match }) {
 
 
 
-      console.log(item);
       
 
     //   console.log(species.name);

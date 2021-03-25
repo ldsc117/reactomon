@@ -1,15 +1,18 @@
 import React , {useState , useEffect} from 'react';
 import {Link} from 'react-router-dom';
+import PokemonPreview from './PokemonPreview';
+import "../App.css";
+
 
 function PokemonList() {
 
-
+    const [offset,setOffset] = useState(0);
     useEffect(() => {
         fetchItems();
-    });
+        
+    }, [offset]);
 
     const [items,setItems] = useState([]);
-    const [offset,setOffset] = useState(0);
     const [pageNumber,setPageNumber] = useState(1);
     
 
@@ -17,7 +20,7 @@ function PokemonList() {
         const data = await fetch(`https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=20`);
         
         const items = await data.json();
-        console.log(items.results);
+        
         setItems(items.results);
     } 
     // const [count ,setCount] = useState(1);
@@ -25,7 +28,6 @@ function PokemonList() {
         e.preventDefault();
         setOffset(offset+20);
         setPageNumber(pageNumber+1);
-        console.log('Clocked');
     }
     function previousClick(e) {
         e.preventDefault();
@@ -34,22 +36,25 @@ function PokemonList() {
             setPageNumber(pageNumber-1);
         }
         
-        console.log('Clocked');
     }
 
   return (
-    <div>
+    <div className='pokemon-list'>
       <h6>PokemonList</h6>
-      { items.map((pokemon,index) => (
+      { items ? items.map((pokemon,index) => (
            
           <h1 key = {index+1}>
               
-              <Link to={`/pokemons/${index+1+((pageNumber-1) * 20 )}`}>{pokemon.name}</Link>
+              <Link to={`/pokemons/${index+1+((pageNumber-1) * 20 )}`}>
+                  
+                  <PokemonPreview
+                  fetchurl={pokemon.url}
+                  /></Link>
               
               </h1>
 
           
-      ))}
+      )) : null}
       <h4>Page Number: {pageNumber}</h4>
       <button onClick={previousClick}>Previous Page</button>
       <button onClick={nextClick}>Next Page</button>

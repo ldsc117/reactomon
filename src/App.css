@@ -27,3 +27,14 @@ p {
   padding-left: 150px;
   padding-right: 150px;
 }
+
+.pokemon-list{
+
+  padding:10px;
+  margin:20px;
+}
+
+.pokemon-preview{
+  margin:20px;
+  padding:20px;
+}
