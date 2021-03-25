@@ -21,16 +21,7 @@ function App() {
       <Route path="/types" component={TypeList} /> 
       </Switch>
       </Router>
-      <Card 
-      title='Pika'
-      imageUrl="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/20.png"
-      body='Lorem ipsum vrajeala'
-      />
-      <Card 
-      title='Pika'
-      imageUrl="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/20.png"
-      body='Lorem ipsum vrajeala'
-      />
+      
     </div>
   );
 }
