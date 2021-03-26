@@ -29,8 +29,6 @@ function PokemonPreview({match, fetchurl }) {
       setSprites(item ? item.sprites : null);
       setStats(item.stats);
 
-        console.log(sprites);
-      
 
     //   console.log(species.name);
     }
