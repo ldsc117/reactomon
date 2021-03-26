@@ -12,8 +12,8 @@ function PokemonPreview({match, fetchurl }) {
  
 
   const [sprites, setSprites] = useState();
-  const [stats, setStats] = useState();
-
+  const [types, setTypes] = useState();
+  const [stringbody, setStringBody] = useState();
 
   const fetchItem = async () => {
     const data = await fetch(
@@ -27,7 +27,7 @@ function PokemonPreview({match, fetchurl }) {
       setItem(item);
       
       setSprites(item ? item.sprites : null);
-      setStats(item.stats);
+      setTypes(item.types);
 
 
     //   console.log(species.name);
@@ -40,7 +40,8 @@ function PokemonPreview({match, fetchurl }) {
     <Card 
       title={item ? item.name: null}
       imageUrl={sprites ? sprites.front_default : null}
-      body='Lorem ipsum vrajeala'
+      body={ types ? 'Pokemon type: ' + types.map((type) => type.type.name).join(', ')
+      : null}
       /> 
     </div>
   );

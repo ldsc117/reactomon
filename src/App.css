@@ -44,3 +44,20 @@ p {
   display: flex;
   flex-flow: row wrap;
 }
+
+a:link {
+  text-decoration: none;
+  text-emphasis-color: white;
+  }
+
+  a {
+    color: #00f7ff;
+    text-decoration: none;
+}
+
+a:hover 
+{
+     color:#00A0C6; 
+     text-decoration:none; 
+     cursor:pointer;  
+}
