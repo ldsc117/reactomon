@@ -5,7 +5,7 @@ import PokemonDetail from './components/PokemonDetail';
 import PokemonList from './components/PokemonList';
 import TypeList from './components/TypeList';
 import { BrowserRouter as Router, Switch , Route } from 'react-router-dom';
-import Card from './components/Card';
+import './components/Card.css';
 
 
 
